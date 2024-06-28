@@ -9,7 +9,7 @@ resource "aws_cloudwatch_metric_alarm" "missing_data_alarm" {
   evaluation_periods  = "1"
   metric_name         = "NumberOfObjects"
   namespace           = "AWS/S3"
-  period              = "86400"  # 24 hours
+  period              = "600"  # 24 hours
   statistic           = "Sum"
   threshold           = "1"
 
