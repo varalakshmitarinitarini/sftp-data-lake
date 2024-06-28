@@ -24,7 +24,7 @@ resource "aws_s3_bucket" "data_lake" {
   }
 
   tags = {
-    Name        = "Data Lake Bucket"
+    Name        = "Data Lake Bucket123"
     Environment = "Dev"
   }
 }
