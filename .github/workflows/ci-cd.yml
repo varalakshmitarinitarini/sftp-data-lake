@@ -37,8 +37,13 @@ jobs:
 
       - name: Terraform Plan
         run: terraform plan
+        register: terraform_plan
+
+      - name: debug
+        ansible.builtin.var: terraform_plan
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve
+        register: terraform_apply
  
